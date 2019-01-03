@@ -14,7 +14,7 @@ client.on("message", message => {
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
   m.send(`${argresult}\n ${m}`);
   })
-  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  ÚÏÏ ÇáãÓÊáãíä `);
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø³ØªÙ„Ù…ÙŠÙ† `);
   message.delete();
   };
   });
@@ -34,7 +34,7 @@ client.on("message", message => {
     message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
    m.send(`${argresult}\n ${m}`);
   })
-   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  ÚÏÏ ÇáãÓÊáãíä `); 
+   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø³ØªÙ„Ù…ÙŠÙ† `); 
    message.delete(); 
   };     
   });
@@ -47,7 +47,7 @@ message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 });
 
 client.on('ready',  () => {
-    console.log('Êã ÊÔÛíá :Broadcast  ');
+    console.log('ØªÙ… ØªØ´ØºÙŠÙ„ :Broadcast  ');
     console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -58,7 +58,7 @@ client.on('ready',  () => {
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('$adminbc')){
 if(!message.author.id === '476185102922285066') return;
-message.channel.sendMessage('ÌÇÑ ÇÑÓÇá ÇáÑÓÇáÉ |:white_check_mark:')
+message.channel.sendMessage('Ø¬Ø§Ø± Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ø±Ø³Ø§Ù„Ø© |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
@@ -76,13 +76,13 @@ m.sendMessage(args)
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
-         .setDescription(`**Help|åíáÈ
+         .setDescription(`**Help|Ù‡ÙŠÙ„Ø¨
 
-       $obc | áÃÑÓÇá ÈÑæÏ ßÇÓÊ ááßá
+       $obc | Ù„Ø£Ø±Ø³Ø§Ù„ Ø¨Ø±ÙˆØ¯ ÙƒØ§Ø³Øª Ù„Ù„ÙƒÙ„
 
-       $bc  |  áÃÑÓÇá ÈÑæÏ ßÇÓÊ ááÃæäáÇíä
+       $bc  |  Ù„Ø£Ø±Ø³Ø§Ù„ Ø¨Ø±ÙˆØ¯ ÙƒØ§Ø³Øª Ù„Ù„Ø£ÙˆÙ†Ù„Ø§ÙŠÙ†
 
-       $adminbc | ÈÑæÏßÇÓÊ ÚÇÏí
+       $adminbc | Ø¨Ø±ÙˆØ¯ÙƒØ§Ø³Øª Ø¹Ø§Ø¯ÙŠ
 
        ** `)
    message.author.sendEmbed(embed)
@@ -90,29 +90,29 @@ m.sendMessage(args)
    }
    });
 
-const developers = ["411852774767198219"]
+const developers = ["411852774767198219","496585065673916417"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
       
   if (message.content.startsWith(adminprefix + 'setg')) {
     client.user.setGame(argresult);
-      message.channel.send(`**?   ${argresult}**`)
+      message.channel.send(`**âœ…   ${argresult}**`)
   } else 
      if (message.content === (adminprefix + "leave")) {
     message.guild.leave();        
   } else  
   if (message.content.startsWith(adminprefix + 'setw')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(`**?   ${argresult}**`)
+      message.channel.send(`**âœ…   ${argresult}**`)
   } else 
   if (message.content.startsWith(adminprefix + 'setl')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(`**?   ${argresult}**`)
+      message.channel.send(`**âœ…   ${argresult}**`)
   } else 
   if (message.content.startsWith(adminprefix + 'sets')) {
     client.user.setGame(argresult, "https://www.twitch.tv/dream");
-      message.channel.send(`**?**`)
+      message.channel.send(`**âœ…**`)
   }
   if (message.content.startsWith(adminprefix + 'setname')) {
   client.user.setUsername(argresult).then
